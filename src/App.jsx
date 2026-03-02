@@ -22,18 +22,18 @@ const App = () => {
     return (
         <div>
             <ToastContainer/>
-            {/* token == "" ? <Login setToken={setToken} /> :
+            {token == "" ? <Login setToken={setToken} /> :
                 <>
-
+ 
                     <div>
                         <Navbar setToken={setToken} />
                     </div>
 
                     <hr className='border-0.5 border-gray-300' />
                     <SideBar />
-                </> */
-}
+                </> }
 
+{/*
             <>
 
                 <div>
@@ -42,7 +42,7 @@ const App = () => {
 
                 <hr className='border-0.5 border-gray-300' />
                 <SideBar />
-            </> 
+            </> */}
         </div>
     )
 }

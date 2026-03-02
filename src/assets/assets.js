@@ -16,3 +16,4 @@ export const assets = {
     bin_icon
 }
 
+export default assets
