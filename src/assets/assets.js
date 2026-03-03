@@ -5,6 +5,7 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.svg'
 import Admin_logo from './Admin_logo.png'
 import bin_icon  from './bin_icon.png'
+import loader from './loader.svg'
 
 export const assets = {
     logo,
@@ -13,7 +14,8 @@ export const assets = {
     upload_area,
     parcel_icon,
     Admin_logo,
-    bin_icon
+    bin_icon,
+    loader
 }
 
 export default assets

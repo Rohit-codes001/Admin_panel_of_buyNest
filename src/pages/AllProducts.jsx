@@ -64,11 +64,14 @@ const AllProducts = () => {
       }
      }catch(err){
       console.log(err)
+    
      }
 }
 
   return (
     <div>
+      
+
       <div className='px-2 py-2 md:px-10 '>
         <p className='md:text-2xl text-xl'>All Product List</p>
         <div className='hidden md:block md:grid md:grid-cols-[1fr_3fr_1fr_1fr_1fr] bg-gray-200 px-4 py-2 '>
@@ -105,6 +108,9 @@ const AllProducts = () => {
           })
         }
       </div>
+      
+      
+      
 
     </div>
   )

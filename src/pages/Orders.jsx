@@ -66,18 +66,16 @@ const Orders = () => {
 
 
   return (
-    <div>
+    <div>{console.log('render')}
 
-      { Orders.length > 0 ? <div>
+      { Orders?.length > 0 ? <div>
+
                     <h1 className='px-15 py-3'>Total Orders</h1>
-
-
-
       <div className='flex flex-col items-center'>
-        {Orders.length > 0 ? Orders?.map((orderinfo, index) => (
+        {Orders?.length > 0 ? Orders?.map((orderinfo, index) => (
           orderinfo?.items?.map((item) => (
 
-            <div className=' flex flex-col gap-2 sm:grid  sm:grid-cols-[1fr_3fr_2fr_2fr_2fr] sm:items-center px-10 sm:py-5 mt-5 border border-gray-300 w-[90%] ' key={index}>
+            <div className=' flex flex-col gap-2 sm:grid  sm:grid-cols-[1fr_3fr_2fr_2fr_2fr] sm:items-center px-10 sm:py-5 mt-5 border border-gray-300 w-[90%] ' key={item._id}>
               <div>
                 <img className='py-1' src={assest.parcel_icon} alt="" />
               </div>
@@ -85,35 +83,35 @@ const Orders = () => {
               {/*---- address info ---  */}
               <div>
 
-                <p>{item.name} x <span className='bg-green-500 text-gray-300 font-bold'>{item.quantity} {item.size}</span></p>
+                <p>{item?.name} x <span className='bg-green-500 text-gray-300 font-bold'>{item?.quantity} {item?.size}</span></p>
                 <div>
-                  <p>{orderinfo.address.firstName + " " + orderinfo.address.lastName}</p>
+                  <p>{orderinfo?.address?.firstName + " " + orderinfo?.address?.lastName}</p>
                 </div>
-                <p>{orderinfo.address.country} {orderinfo.address.state}</p>
-                <p>{orderinfo.address.city} {orderinfo.address.street} {orderinfo.address.zipCode}</p>
-                <p>{orderinfo.address.phone}</p>
+                <p>{orderinfo?.address?.country} {orderinfo?.address?.state}</p>
+                <p>{orderinfo?.address?.city} {orderinfo?.address?.street} {orderinfo?.address?.zipCode}</p>
+                <p>{orderinfo?.address?.phone}</p>
               </div>
 
               {/*---- about items quatity payment data ---  */}
 
               <div>
-                <p>items {item.quantity}</p>
-                <p>Method {orderinfo.paymentMethod}</p>
-                <p> Payment {orderinfo.payment ? "Done" : "Pending"}</p>
-                <p>{new Date(orderinfo.date).toDateString()}</p>
+                <p>items {item?.quantity}</p>
+                <p>Method {orderinfo?.paymentMethod}</p>
+                <p> Payment {orderinfo?.payment ? "Done" : "Pending"}</p>
+                <p>{new Date(orderinfo?.date).toDateString()}</p>
 
               </div>
 
 
               {/*---- price ---  */}
               <div>
-                <p>{currancy} {item.price * item.quantity}</p>
+                <p>{currancy} {item?.price * item?.quantity}</p>
               </div>
 
 
-              {/*---- change sattus ---  */}
+              {/*---- change status ---  */}
               <div>
-                <select className='py-2 px-4 border border-gray-300 mb-2 cursor-pointer' onChange={(e) => updateStatus(orderinfo._id , e.target.value)} value={orderinfo.orderStatus}  >
+                <select className='py-2 px-4 border border-gray-300 mb-2 cursor-pointer' onChange={(e) => updateStatus(orderinfo?._id , e.target.value)} value={orderinfo?.orderStatus}  >
                   <option value="Order Placed">Order Placed</option>
                   <option value="Packing">Packing</option>
                   <option value="Shiped">Shiped</option>
@@ -126,7 +124,7 @@ const Orders = () => {
             </div>
           ))
 
-        )) : <p>No any order is avilble</p>}
+        )) : <p>No any order is availble</p>}
       </div>
 
       </div>
