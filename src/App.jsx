@@ -29,20 +29,10 @@ const App = () => {
                         <Navbar setToken={setToken} />
                     </div>
 
-                    <hr className='border-0.5 border-gray-300' />
+
                     <SideBar />
                 </> }
 
-{/*
-            <>
-
-                <div>
-                    <Navbar setToken={setToken} />
-                </div>
-
-                <hr className='border-0.5 border-gray-300' />
-                <SideBar />
-            </> */}
         </div>
     )
 }

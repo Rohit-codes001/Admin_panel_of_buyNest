@@ -24,6 +24,7 @@ const AllProducts = () => {
       })
       let data = await respons.json()
       if (data.success) {
+        console.log('done')
         
         setproductdata(data.allproducts)
       } else {
@@ -32,7 +33,7 @@ const AllProducts = () => {
 
 
     } catch (error) {
-      console.log(error)
+      
 
     }
   }

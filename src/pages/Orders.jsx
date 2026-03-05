@@ -66,7 +66,7 @@ const Orders = () => {
 
 
   return (
-    <div>{console.log('render')}
+    <div>
 
       { Orders?.length > 0 ? <div>
 
